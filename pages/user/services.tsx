@@ -22,7 +22,7 @@ const panel = () => {
                 <MDBBreadcrumbItem>
                     <a href='/'>Home</a>
                 </MDBBreadcrumbItem>
-                <MDBBreadcrumbItem active>Panel</MDBBreadcrumbItem>
+                <MDBBreadcrumbItem active>Services</MDBBreadcrumbItem>
             </MDBBreadcrumb>
         </MDBCol>
     </MDBRow>
@@ -37,23 +37,22 @@ const panel = () => {
   text="white"
   style={{ width: '', marginTop: '1rem', marginLeft: '1rem' }}
   >
-      <Card.Header>Realizar Ações</Card.Header>
+      <Card.Header>Netflix</Card.Header>
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <div>
             {' '}
-            Realize ações e ganhe instantaneamente, siga, curta e
-            ganhe.{' '}
+            Adiquira seu plano com MediaGrowUp.{' '}
           </div>
           <footer>
             <div className="d-grid gap-2 mt-2">
               <Link
-              href="/user/instagram/list"
+              href="/user/services/netflix"
               >
             <Button
             variant="light"
             >
-Realizar ações
+Ver Planos
             </Button>
             </Link>
             </div>

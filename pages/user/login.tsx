@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { Alert, Button, Card, Form, Spinner } from "react-bootstrap";
 import axios from "axios";
 import Header from "../components/Header";
+import { MDBBreadcrumb, MDBBreadcrumbItem, MDBCol, MDBRow } from "mdb-react-ui-kit";
 
 export default function Index() {
   const [email, setEmail] = React.useState("");
@@ -42,7 +43,26 @@ export default function Index() {
   return (
     <>
       <Header />
-      <Card className="flex container p-2">
+
+     
+        <Card.Header
+        style={{ width: '', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem' }}
+        >
+      <MDBRow>
+      <MDBCol>
+          <MDBBreadcrumb className="bg-dark rounded-3 p-3 mb-4">
+              <MDBBreadcrumbItem>
+                  <a href='/'>Home</a>
+              </MDBBreadcrumbItem>
+              <MDBBreadcrumbItem active>Login</MDBBreadcrumbItem>
+          </MDBBreadcrumb>
+      </MDBCol>
+  </MDBRow>
+  </Card.Header>
+  <Card 
+      bg="dark"
+      style={{ width: '', marginTop: '1rem'}}
+      className="flex container p-2">
         <Form.Group>
           <Form.Label>Email : </Form.Label>
           <Form.Control
@@ -75,17 +95,17 @@ export default function Index() {
         }
         
 
-        <div className="d-grid gap-2 mt-2">
+        <div className="d-grid gap-2 mt-2 text-dark">
           <Button
             onClick={login}
             className="LoginButton"
-            variant="dark"
+            variant="light"
             type="submit"
           >
             Login
           </Button>
-          <Button className="RegisterButton" variant="dark" type="submit">
-            <Link href="/user/register" className="text-light">
+          <Button className="RegisterButton" variant="light" type="submit">
+            <Link href="/user/register" className="text-dark">
               Ainda não tenho conta
             </Link>
           </Button>
